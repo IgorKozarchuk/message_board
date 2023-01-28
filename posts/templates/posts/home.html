@@ -1,7 +1,13 @@
-<h1>Message board homepage</h1>
+{% load static %}
 
-<ul>
-{% for post in post_list %}
-	<li>{{ post.text }}</li>
-{% endfor %}
-</ul>
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+<div class="container mt-3">
+	<h1 class="h1 text-primary">Message board homepage</h1>
+
+	<ul>
+	{% for post in post_list %}
+		<li>{{ post.text }}</li>
+	{% endfor %}
+	</ul>
+</div>
